@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Virus Broadcast</title>
+</head>
+<body>
+<script type="text/javascript">
+    var sock = null;
+    var wsuri = "ws://127.0.0.1:9999/websocket";
+    window.onload = function () {
+        sock = new WebSocket(wsuri);
+        sock.onmessage = function (e) {
+            var image = document.getElementById('image');
+            image.src = e.data;
+        }
+    };
+</script>
+<form>
+    <img id="image">
+</form>
+</body>
+</html>
