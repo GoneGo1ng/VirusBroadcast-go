@@ -1,4 +1,4 @@
-module virusbroadcast
+module github.com/GoneGo1ng/virusbroadcast
 
 go 1.12
 
